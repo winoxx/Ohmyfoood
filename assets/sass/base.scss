@@ -1,0 +1,53 @@
+
+body{
+    font-family: 'Raleway', sans-serif;
+    padding:0px;
+    margin:0px;
+    
+    
+  }
+  
+  .wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+  }
+  /* GENERAL FLEXBOX  */
+  
+  .flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* espace entre deux elements*/
+  }
+  .flexbetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flexaround{
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  .flexColummCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flexColummBetween{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  .flexColummAround{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+  .flex{
+    display: flex;
+  }

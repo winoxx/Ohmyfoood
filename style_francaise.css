@@ -1,0 +1,32 @@
+span i{
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+   transform: translateY(-50%);
+  
+    
+  }
+  span .fas{
+    color: transparent;
+    background-image: linear-gradient(0deg,rgba(147,86,220,1),rgba(255,121,218,1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    
+  }
+  .fas:hover{
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  footer{
+    background-color: #353535;
+    color: white;
+    height: 350px;
+    
+    
+    
+   
+  }
