@@ -1,7 +1,3 @@
-body{
-  margin:0;
-  padding: 0;
-}
 
 header{
   text-align: center;
@@ -115,28 +111,24 @@ ol{
   gap:2rem;
   display: grid;
   grid-template-columns:repeat(2,1fr);
-  
  
 }
 .card_image{
   background-size: cover;
-  height: 12rem;
+  height: 15rem;
   border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
-  padding: 2rem 1rem;
- 
 }
 .image1{
-  background-image: url("/assets/images/assiettemain.jpg");
+  background-image: url("/media/assiettemain.jpg");
 }
 .image2{
-  background-image: url("/assets/images/assiettevuehauteur.jpg");
+  background-image: url("/media/assiettevuehauteur.jpg");
 }
 .image3{
-  background-image: url("/assets/images/assiette.jpg");
+  background-image: url("/media/assiette.jpg");
 }
 .image4{
-  background-image: url("/assets/images/assiettelarge.jpg");
+  background-image: url("/media/assiettelarge.jpg");
 }
 
 h2{
@@ -148,7 +140,7 @@ h2{
   position: relative;
 }
 .new::before{
-  content:"new";
+  content:"New";
   position: absolute;
   min-height: 2rem;
   width: 5rem;

@@ -1,32 +1,180 @@
-span i{
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-   transform: translateY(-50%);
+body{
+  margin:0;
+  padding: 0;
+}
+h1,h2,h3,h4,p{
+  padding: 0;
+  margin: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+.container_menu{
+  background-color: #f3f3f3;
+  max-width: 1280px;
+  margin: auto;
+  height:550px;
+  border-radius: 15px 15px 0 0;
+  margin-top: -4rem; 
+  position: relative;
+}
+.resto_title{
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* emplacement du palette de gout*/
+.resto_title h2{
+  padding: 1.5rem 0 3rem 7rem;
   
-    
-  }
-  span .fas{
-    color: transparent;
-    background-image: linear-gradient(0deg,rgba(147,86,220,1),rgba(255,121,218,1));
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 200ms ease-in-out;
-    
-  }
-  .fas:hover{
-    opacity: 1;
-    transform: translateY(-50%) scale(1.2);
-  }
+}
+
+.menu{
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   
-  footer{
-    background-color: #353535;
-    color: white;
-    height: 350px;
-    
-    
-    
-   
+
+}
+.menu_category{
+  border-radius: 1rem;
+}
+/* espacement entre entrées et fricassée d'escargot*/
+.menu_category h3{
+ margin: 2rem 0;
+ 
+}
+.menu_item{
+  display: flex;
+  white-space: nowrap;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  
+  
+}
+/* quand le hover est sur menu item le check a une margin 0*/
+.menu_item:hover .check{
+  margin-right: 0;
+}
+
+.check{
+  background-color: #99e2d0;
+  margin-right: -3rem;
+  width: 3rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.5s;
+  display: grid;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.check i{
+  display: grid;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  color:#99e2d0;
+}
+
+.price{
+margin-left: auto;
+font-weight: 900;
+padding: 1rem;
+display: flex;
+align-items: flex-end;
+
+
+}
+
+.menu_item{
+  display: flex;
+}
+.description{
+  
+  padding: 1rem;
+  overflow: hidden;
+}
+.resto_main{
+  padding: 0 7rem;
+ }
+.resto_main h3{
+ text-transform: uppercase;
+text-align: center;
+  
+}
+
+
+.heart{
+  color: transparent;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  position: relative;
+  font-size: 2rem;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+
+}
+.heart:hover{
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+
+footer {
+  background-color: #353535;
+  color: white;
+  height: 350px;
+}
+
+footer p {
+  padding-left: 2rem;
+}
+
+p i {
+  padding-right: 1rem;
   }
+  @media (min-width: 268px){
+  
+    .menu_item{
+       flex-direction: column;
+  
+       }
+       .menu_item{
+        grid-template-columns: repeat(1, 1fr);
+       }
+    }
+    @media (min-width: 990px){
+    
+      .menu ol{
+         flex-direction: column;
+    
+         }
+         .menu_list{
+          grid-template-columns: repeat(1, 1fr);
+         }
+      }
+      @media (min-width: 1090px){
+       
+        .menu ol{
+          flex-direction: row;
+     
+          }
+    
+      
+           .menu_list{
+            grid-template-columns: repeat(2, 1fr);
+           }
+        }

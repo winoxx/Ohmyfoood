@@ -1,235 +1,219 @@
-@import "./media/sass/base.scss";
-header{
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
   text-align: center;
   box-shadow: 0 0 0.5rem rgb(0, 0, 0, 25%);
   padding: 0.5rem;
   position: relative;
-  
-  
 }
 
-main .city{
+main .city {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f3f3f3;
   text-align: center;
   padding: 0.5rem;
-  
-
 }
 
-main .city i{
+main .city i {
   font-size: 1.5rem;
-  
 }
-.explorer{
+
+.explorer {
   text-align: center;
 }
-.explorer h2{
+
+.explorer h2 {
   margin-top: 2rem;
   font-size: 2rem;
-
 }
-.explorer p{
+
+.explorer p {
   font-size: 1rem;
 }
-.explorer button{
-  background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+.explorer button {
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 25px;
-padding: .75rem 1rem;
-font-size: 1.5rem;
-font-weight: 500;
-color: white;
-cursor: pointer;
-transition: transform 200ms;
-box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-border: none;
-margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: transform 200ms;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0/25%);
+  border: none;
+  margin-top: 1.5rem;
 }
-.explorer button:hover
-{
+
+.explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
-} 
-.menu li{
+}
+
+.menu li {
   position: relative;
 }
-  
 
-.menu li::before{
- content: counter(steps);
- counter-increment: steps;
- background-color:#9356dc;
- color: white;
- display: grid;
- place-items: center;
- height:2rem;
- width: 2rem;
- border-radius: 50%;
- position: absolute;
- bottom: 0.7rem;
- left: -1rem;
-
- 
+.menu li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  background-color: #9356dc;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.7rem;
+  left: -1rem;
 }
-.menu .fas{
+
+.menu .fas {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
-  }
-
-.menu{
-  counter-reset: steps;
-  
 }
-.menu li:hover
-{
+
+.menu {
+  counter-reset: steps;
+}
+
+.menu li:hover {
   transform: scale(1.02);
 }
 
-li{
-
-  background-color:  #f6f6f6;
+li {
+  background-color: #f6f6f6;
   padding: 1rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
   list-style-type: none;
-  
 }
 
-ol{
+ol {
   display: flex;
   gap: 2rem;
-  
 }
-.restaurant{
+
+.restaurant {
   background-color: #f6f6f6;
-
 }
-.menu_list{
-  gap:2rem;
+
+.menu_list {
+  gap: 2rem;
   display: grid;
-  grid-template-columns:repeat(2,1fr);
- 
-}
-.card_image{
-  background-size: cover;
-  height: 15rem;
-  border-radius: 1rem 1rem 0 0;
-}
-.image1{
-  background-image: url("/media/assiettemain.jpg");
-}
-.image2{
-  background-image: url("/media/assiettevuehauteur.jpg");
-}
-.image3{
-  background-image: url("/media/assiette.jpg");
-}
-.image4{
-  background-image: url("/media/assiettelarge.jpg");
+  grid-template-columns: repeat(2, 1fr);
 }
 
-h2{
-  padding: 2rem;
-  
+.card_image {
+  background-size: cover;
+  height: 12rem;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+  padding: 2rem 1rem;
 }
-.new{
- 
+
+.image1 {
+  background-image: url("/assets/images/assiettemain.jpg");
+}
+
+.image2 {
+  background-image: url("/assets/images/assiettevuehauteur.jpg");
+}
+
+.image3 {
+  background-image: url("/assets/images/assiette.jpg");
+}
+
+.image4 {
+  background-image: url("/assets/images/assiettelarge.jpg");
+}
+
+h2 {
+  padding: 2rem;
+}
+
+.new {
   position: relative;
 }
-.new::before{
-  content:"New";
+
+.new::before {
+  content: "new";
   position: absolute;
   min-height: 2rem;
   width: 5rem;
-  background-color:#99e2d0;
-  color:#1b6150;
+  background-color: #99e2d0;
+  color: #1b6150;
   display: grid;
   place-items: center;
   right: 1rem;
-  top:1rem;
+  top: 1rem;
 }
-a{
-  text-decoration: none;
 
+a {
+  text-decoration: none;
 }
-.card_description{
+
+.card_description {
   position: relative;
 }
- .card_description h3{
-  padding:8px 22px;
-}
-.card_description p{
+
+.card_description h3 {
   padding: 8px 22px;
 }
-span i{
+
+.card_description p {
+  padding: 8px 22px;
+}
+
+span i {
   font-size: 2rem;
   position: absolute;
   right: 1rem;
   top: 50%;
- transform: translateY(-50%);
-
-  
+  transform: translateY(-50%);
 }
-span .fas{
+
+span .fas {
   color: transparent;
-  background-image: linear-gradient(0deg,rgba(147,86,220,1),rgba(255,121,218,1));
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms ease-in-out;
-  
 }
-.fas:hover{
+
+.fas:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
 }
 
-footer{
+footer {
   background-color: #353535;
   color: white;
   height: 350px;
-  
-  
-  
- 
 }
-footer p{
+
+footer p {
   padding-left: 2rem;
 }
-p i{
+
+p i {
   padding-right: 1rem;
 }
 
+/* VERSION MOBILE*/
+@media screen and (min-width: 768px) {
+  .menu_list {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.scss.map */

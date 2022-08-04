@@ -1,10 +1,15 @@
 body{
   margin:0;
-  padding: 0;
+  padding:0;
 }
 h1,h2,h3,h4,p{
   padding: 0;
   margin: 0;
+}
+ 
+h1{
+padding: 1rem 0;
+text-align: center;
 }
 
 img{
@@ -17,7 +22,8 @@ img{
 .container_menu{
   background-color: #f3f3f3;
   max-width: 1280px;
-  margin: auto;
+  margin:  0 auto;
+  padding: 35px 0 90px;
   border-radius: 15px 15px 0 0;
   margin-top: -4rem; 
   position: relative;
@@ -28,13 +34,12 @@ img{
   align-items: center;
   justify-content: space-between;
 }
+/* emplacement du palette de gout*/
 .resto_title h2{
-  padding: 1.5rem 0 7rem 7rem;
+  padding: 1.5rem 0 3rem 7rem;
   
 }
-.resto_main h3{
-  padding: 15rem 0 15rem 0;
-}
+
 .menu{
   gap: 1rem;
   display: grid;
@@ -45,11 +50,18 @@ img{
 .menu_category{
   border-radius: 1rem;
 }
+/* espacement entre entrées et fricassée d'escargot*/
+.menu_category h3{
+ margin: 2rem 0;
+ 
+}
 .menu_item{
   display: flex;
   overflow: hidden;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  margin: 8px 0;
   
 }
 /* quand le hover est sur menu item le check a une margin 0*/
@@ -66,16 +78,17 @@ img{
   display: grid;
   align-items: center;
   justify-content: space-around;
- 
-  
-  
- 
-  
 
 }
 .check i{
-
-
+  display: grid;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  color:#99e2d0;
 }
 
 .price{
@@ -87,11 +100,7 @@ align-items: flex-end;
 
 
 }
-  
 
-.menu_category{
-
-}
 .menu_item{
   display: flex;
 }
@@ -104,8 +113,28 @@ align-items: flex-end;
  }
 .resto_main h3{
  text-transform: uppercase;
- padding: 0 0 0 76px
+text-align: center;
+  
 }
+.btn{
+  background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+  border-radius: 25px;
+padding: .75rem 1rem;
+font-size: 1.5rem;
+font-weight: 500;
+color: white;
+cursor: pointer;
+transition: transform 200ms;
+box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+border: none;
+margin-top: 1.5rem;
+}
+.btn:hover
+{
+  transform: scale(1.02);
+  opacity: 0.9;
+} 
+
 
 
 .heart{
@@ -123,17 +152,46 @@ align-items: flex-end;
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
 }
+footer {
+  height: auto;
+  background-color: #353535;
+  color: white;
+  height: 350px;
+  padding: 0 16rem;
+  
+ 
+
+}
+
+footer p {
+  padding-left: 2rem;
+  margin:4px 0;
+ 
+}
+footer h2 {
+  padding: 2rem;
+}
+
+p i {
+  padding-right: 1rem;
+}
 
 
-footer{
-    background-color: #353535;
-    color: white;
-    height: 350px;
-  }
-  footer p{
-    padding-left: 2rem;
-  }
-  p i{
-    padding-right: 1rem;
-  }
+@media (min-width: 99px){
+  
+  .menu{
+     flex-direction: column;
+     grid-template-columns: repeat(1, 1fr);
+
+     }
+     }
+  
+    @media (min-width: 1090px){
+      .menu{
+        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
+        }
+    
+      }
+
 
